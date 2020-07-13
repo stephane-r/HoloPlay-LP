@@ -1,6 +1,6 @@
-import Navigation from "../Navigation";
-import Logo from "../Logo";
-import Row from "../Row";
+import Navigation from '../Navigation';
+import Logo from '../Logo';
+import Row from '../Row';
 
 const Header = () => (
   <>
@@ -12,13 +12,12 @@ const Header = () => (
     </header>
     <style jsx>{`
       .header {
+        padding: 0 40px;
       }
       .header-container {
         display: flex;
-        height: 100px;
+        height: 120px;
         align-items: center;
-        justify-content: space-between;
-        max-width: 1200px;
         width: 100%;
         margin: auto;
       }

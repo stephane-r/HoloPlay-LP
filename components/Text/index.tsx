@@ -1,12 +1,17 @@
-import Navigation from "../Navigation";
+import Navigation from '../Navigation';
 
-const Text = ({ children }) => (
+interface Props {
+  color?: string;
+}
+
+const Text = ({ color = '#303133', children }) => (
   <>
     <p className="text">{children}</p>
     <style jsx>{`
       .text {
-        color: white;
+        color: ${color};
         font-size: 18px;
+        line-height: 1.6;
         margin: 0;
       }
     `}</style>

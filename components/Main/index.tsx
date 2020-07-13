@@ -5,9 +5,13 @@ const Main = ({ children }) => (
       .main {
         display: flex;
         align-items: center;
-        max-width: 1200px;
-        min-height: calc(100vh - 100px);
+        min-height: calc(100vh - 200px);
         margin: auto;
+        padding: 0 40px;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
       }
     `}</style>
   </>

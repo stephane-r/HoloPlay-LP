@@ -5,9 +5,6 @@ const Navigation = () => (
         <span className="nav-text">Home</span>
       </a>
       <a href="" className="nav-link">
-        about
-      </a>
-      <a href="" className="nav-link">
         features
       </a>
       <a href="" className="nav-link">
