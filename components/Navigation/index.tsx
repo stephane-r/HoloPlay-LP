@@ -1,7 +1,7 @@
 const Navigation = () => (
   <>
     <nav className="nav">
-      <a href="" className="nav-link is-active">
+      <a href="" className="nav-link">
         <span className="nav-text">Home</span>
       </a>
       <a href="" className="nav-link">
@@ -25,11 +25,6 @@ const Navigation = () => (
         font-weight: bold;
         font-size: 13px;
         padding-left: 20px;
-      }
-      .is-active > .nav-text {
-        display: block;
-        border-bottom: 2px solid currentColor;
-        padding-bottom: 4px;
       }
       .nav-link:not(:last-child) {
         padding-right: 20px;

@@ -1,6 +1,6 @@
-import Navigation from '../Navigation';
-import Logo from '../Logo';
-import Row from '../Row';
+import Navigation from "../Navigation";
+import Logo from "../Logo";
+import Row from "../Row";
 
 const Header = () => (
   <>
