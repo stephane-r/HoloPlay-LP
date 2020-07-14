@@ -1,9 +1,6 @@
-import Shape from '../Shape';
-
 const App = ({ children }) => (
   <>
     <div>{children}</div>
-    {/* <Shape /> */}
     <style jsx global>{`
       html,
       body {
