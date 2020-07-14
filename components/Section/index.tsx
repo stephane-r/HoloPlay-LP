@@ -2,6 +2,7 @@ interface Props {
   style?: {
     [key: string]: string | number;
   };
+  children: React.ReactChild | React.ReactChild[];
 }
 
 const Section = ({ style, children }: Props) => (

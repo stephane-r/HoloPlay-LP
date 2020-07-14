@@ -2,6 +2,7 @@ import Navigation from "../Navigation";
 
 interface Props {
   href: null | string;
+  children: React.ReactChild | React.ReactChild[];
 }
 
 const Button = ({ href, children }: Props) => (

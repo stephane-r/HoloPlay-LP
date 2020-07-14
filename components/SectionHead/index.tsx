@@ -4,8 +4,12 @@ import Text from "../Text";
 
 interface Props {
   color?: string;
+  headingLevel?: string;
   title: string;
   text: string;
+  style?: {
+    [key: string]: string | number;
+  };
 }
 
 const SectionHead = ({
