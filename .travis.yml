@@ -1,0 +1,24 @@
+language: node_js
+
+before_install:
+  - nvm install 14
+  - curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
+before_script:
+  - pnpm install
+
+stages:
+  - deploy
+
+jobs:
+  include:
+    - stage: deploy
+      name: Deploying Landing Page
+      script: pnpm run build:export
+
+deploy:
+  provider: page
+  api_key: $GITHUB_TOKEN
+  file: out
+  skip_cleanup: true
+  on:
+    tag: true
