@@ -20,5 +20,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: out
   skip_cleanup: true
-  # on:
-  # tags: true
+  on:
+    branch: develop
+    # tags: true
