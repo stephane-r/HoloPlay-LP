@@ -6,7 +6,11 @@ const Features = ({ items }) => (
       {items.map(({ src, size, title, text }) => (
         <li key={title} className="item">
           <div style={{ height: 70 }}>
-            <img src={src} alt={title} width={size} />
+            <img
+              src={process.env.ASSET_PREFIX + src}
+              alt={title}
+              width={size}
+            />
           </div>
           <h3 style={{ marginTop: 0 }}>{title}</h3>
           <Text style={{ fontSize: 14, lineHeight: 1.4 }} color="black">
