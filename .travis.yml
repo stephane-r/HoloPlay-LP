@@ -1,9 +1,10 @@
 language: node_js
 
 before_install:
-  - curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
 before_script:
-  - pnpm install
+  - yarn install
 
 stages:
   - deploy
@@ -12,7 +13,7 @@ jobs:
   include:
     - stage: deploy
       name: Deploying Landing Page
-      script: pnpm run build:export
+      script: yarn build:export
 
 deploy:
   provider: page
