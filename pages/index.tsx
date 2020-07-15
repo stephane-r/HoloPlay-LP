@@ -1,3 +1,4 @@
+import Head from "next/head";
 import App from "../components/App";
 import Header from "../components/Header";
 import Button from "../components/Button";
@@ -13,6 +14,10 @@ import Section from "../components/Section";
 
 const Home = () => (
   <App>
+    <Head>
+      <title>Youtube Audio Player</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <Header />
     <main>
       <Yap />
@@ -31,6 +36,36 @@ const Home = () => (
       <Divider />
     </main>
     <Footer />
+    <style jsx>{`
+      .container {
+        display: flex;
+        align-items: center;
+        min-height: calc(100vh - 200px);
+        margin: auto;
+        padding: 0 40px;
+      }
+      .section {
+        width: 100%;
+        min-width: 700px;
+        max-width: 800px;
+        flex: 1;
+        padding-right: 100px;
+        padding-left: 65px;
+      }
+      .app-screens {
+        transform: rotate(20deg);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 80px;
+      }
+      .aside {
+        flex: 1;
+      }
+      .screen {
+        padding: 0 10px;
+      }
+    `}</style>
   </App>
 );
 
@@ -160,7 +195,7 @@ const ScreenShots = () => (
       <Spacer height={70} />
       <ul className="list">
         {SCREENSHOTS.map(({ src, title }) => (
-          <li>
+          <li key={src}>
             <img src={src} className="screenshot" alt={title} title={title} />
           </li>
         ))}

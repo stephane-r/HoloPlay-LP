@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "build:export": "pnpm run build && pnpm run export",
+    "build:export": "npm run clean && npm run build && npm run export",
     "version:major": "node ./scripts/git-push-tag major",
     "version:minor": "node ./scripts/git-push-tag minor",
-    "version:patch": "node ./scripts/git-push-tag patch"
+    "version:patch": "node ./scripts/git-push-tag patch",
+    "clean": "rm -rf .next out"
   },
   "dependencies": {
     "next": "9.4.4",

@@ -4,7 +4,7 @@ const Features = ({ items }) => (
   <>
     <ul className="list">
       {items.map(({ title, text }) => (
-        <li className="item">
+        <li key={title} className="item">
           <h3 style={{ marginTop: 0 }}>{title}</h3>
           <Text color="black">{text}</Text>
         </li>
