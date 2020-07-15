@@ -1,7 +1,6 @@
 language: node_js
 
 before_install:
-  - nvm install 14
   - curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
 before_script:
   - pnpm install
@@ -17,7 +16,7 @@ jobs:
 
 deploy:
   provider: page
-  api_key: $GITHUB_TOKEN
+  github_token: $GITHUB_TOKEN
   local_dir: out
   skip_cleanup: true
   on:
