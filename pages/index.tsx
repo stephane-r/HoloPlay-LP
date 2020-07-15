@@ -115,21 +115,21 @@ const Yap = () => {
           <div className="app-screens">
             <div className="screen">
               <img
-                src={`${process.env.ASSET_PREFIX}/mokup.png`}
+                src={`${process.env.ASSET_PREFIX}/dashboard.png`}
                 alt=""
                 width="250"
               />
             </div>
             <div className="screen">
               <img
-                src={`${process.env.ASSET_PREFIX}/mokup.png`}
+                src={`${process.env.ASSET_PREFIX}/player.png`}
                 alt=""
                 width="350"
               />
             </div>
             <div className="screen">
               <img
-                src={`${process.env.ASSET_PREFIX}/mokup.png`}
+                src={`${process.env.ASSET_PREFIX}/playlists.png`}
                 alt=""
                 width="250"
               />
