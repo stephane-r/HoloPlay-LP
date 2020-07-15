@@ -99,7 +99,11 @@ const Yap = () => {
           />
           <Spacer height={40} />
           <Button href={downloadUrl}>
-            <img src="/android.svg" alt="Android icon" width={30} />
+            <img
+              src={`${process.env.ASSET_PREFIX}/android.svg`}
+              alt="Android icon"
+              width={30}
+            />
             <span>
               &nbsp; Télécharger sur <strong>Android</strong>
               {""}
@@ -110,13 +114,25 @@ const Yap = () => {
         <aside className="aside">
           <div className="app-screens">
             <div className="screen">
-              <img src="/mokup.png" alt="" width="250" />
+              <img
+                src={`${process.env.ASSET_PREFIX}/mokup.png`}
+                alt=""
+                width="250"
+              />
             </div>
             <div className="screen">
-              <img src="/mokup.png" alt="" width="350" />
+              <img
+                src={`${process.env.ASSET_PREFIX}/mokup.png`}
+                alt=""
+                width="350"
+              />
             </div>
             <div className="screen">
-              <img src="/mokup.png" alt="" width="250" />
+              <img
+                src={`${process.env.ASSET_PREFIX}/mokup.png`}
+                alt=""
+                width="250"
+              />
             </div>
           </div>
         </aside>
