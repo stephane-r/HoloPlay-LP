@@ -18,7 +18,7 @@ jobs:
 deploy:
   provider: page
   api_key: $GITHUB_TOKEN
-  file: out
+  local_dir: out
   skip_cleanup: true
   on:
     tags: true
