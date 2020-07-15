@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import App from "../components/App";
 import Header from "../components/Header";
 import Button from "../components/Button";
@@ -113,27 +114,35 @@ const Yap = () => {
         </section>
         <aside className="aside">
           <div className="app-screens">
-            <div className="screen">
-              <img
-                src={`${process.env.ASSET_PREFIX}/dashboard.png`}
-                alt=""
-                width="250"
-              />
-            </div>
-            <div className="screen">
-              <img
-                src={`${process.env.ASSET_PREFIX}/player.png`}
-                alt=""
-                width="350"
-              />
-            </div>
-            <div className="screen">
-              <img
-                src={`${process.env.ASSET_PREFIX}/playlists.png`}
-                alt=""
-                width="250"
-              />
-            </div>
+            <ParallaxProvider>
+              <div className="screen">
+                <Parallax y={[-27, 20]} tagOuter="figure">
+                  <img
+                    src={`${process.env.ASSET_PREFIX}/dashboard.png`}
+                    alt=""
+                    width="250"
+                  />
+                </Parallax>
+              </div>
+              <div className="screen">
+                <Parallax y={[10, -10]} tagOuter="figure">
+                  <img
+                    src={`${process.env.ASSET_PREFIX}/player.png`}
+                    alt=""
+                    width="350"
+                  />
+                </Parallax>
+              </div>
+              <div className="screen">
+                <Parallax y={[30, -40]} tagOuter="figure">
+                  <img
+                    src={`${process.env.ASSET_PREFIX}/playlists.png`}
+                    alt=""
+                    width="250"
+                  />
+                </Parallax>
+              </div>
+            </ParallaxProvider>
           </div>
         </aside>
       </div>

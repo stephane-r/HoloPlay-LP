@@ -13,6 +13,10 @@ const App = ({ children }) => (
         background-image: linear-gradient(315deg, #5472d3 0%, #002171 95%);
       }
 
+      figure {
+        margin: 0;
+      }
+
       * {
         box-sizing: border-box;
       }
