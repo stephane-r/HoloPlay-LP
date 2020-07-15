@@ -217,7 +217,7 @@ const ScreenShots = () => (
           harum vel voluptate reprehenderit excepturi! Asperiores quasi, illo
           cum deleniti ratione doloremque."
       />
-      <Spacer height={70} />
+      <Spacer height={100} />
       <ul className="list">
         {SCREENSHOTS.map(({ src, title }) => (
           <li key={src}>
@@ -245,9 +245,7 @@ const ScreenShots = () => (
 
 const Footer = () => (
   <>
-    <footer className="footer">
-      <Spacer height={50} />
-    </footer>
+    <footer className="footer" />
     <style jsx>{`
       .footer {
         background: white;
@@ -258,41 +256,59 @@ const Footer = () => (
 
 const FEATURES_ITEMS = [
   {
+    src: "/icons/search.svg",
+    size: 60,
     title: "Recherche par vidéo et playlist",
     text: "TODO",
   },
   {
+    src: "/icons/queue-music.svg",
+    size: 60,
     title: "Créez vos playlists",
     text: "Créer, éditer ou supprimer un nombre illimité de playlists",
   },
   {
-    title: "Mettez en favoris favoris",
+    src: "/icons/favorite.svg",
+    size: 55,
+    title: "Mettez en favoris",
     text: "Un écran dédié à vos musiques favorites",
   },
   {
+    src: "/icons/mobile.svg",
+    size: 60,
     title: "Background mode",
     text:
       "Continuez à naviguer sur votre mobile en écoutant vos musiques préférées",
   },
   {
+    src: "/icons/offline.svg",
+    size: 60,
     title: "Offline",
     text:
       "Le dernier son écouté reste en cache, partez dans le métro tranquille",
   },
   {
+    src: "/icons/android-black.svg",
+    size: 70,
     title: "Compatible Android Auto",
     text: "Ecoutez vos musiques favorites, même en conduisant",
   },
   {
+    src: "/icons/security.svg",
+    size: 60,
     title: "Respet de votre vie privée",
     text: "TODO",
   },
   {
+    src: "/icons/code.svg",
+    size: 60,
     title: "Open Source",
     text:
       "To ensure security and stability, a big part of Headset's source is kept open",
   },
   {
+    src: "/icons/backup.svg",
+    size: 60,
     title: "Cloud Syncing",
     text:
       "Déjà utilisateur de l'une des instances Invidious ? Rajouter votre token et synchroniser vos sons préférés sur votre mobile",

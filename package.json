@@ -14,6 +14,7 @@
     "clean": "rm -rf .next out"
   },
   "dependencies": {
+    "@material-ui/icons": "^4.9.1",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
