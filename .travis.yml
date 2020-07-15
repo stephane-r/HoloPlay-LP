@@ -21,5 +21,4 @@ deploy:
   local_dir: out
   skip_cleanup: true
   on:
-    branch: develop
-    # tags: true
+    tags: true
