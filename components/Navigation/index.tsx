@@ -29,6 +29,10 @@ const Navigation = () => (
       .nav-link:not(:last-child) {
         padding-right: 20px;
       }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     `}</style>
   </>
 );

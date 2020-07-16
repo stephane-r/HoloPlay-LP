@@ -1,4 +1,5 @@
-import Text from "../../Text";
+import Text from '../../Text';
+import Title from '../../Title';
 
 const Features = ({ items }) => (
   <>
@@ -12,7 +13,9 @@ const Features = ({ items }) => (
               width={size}
             />
           </div>
-          <h3 style={{ marginTop: 0 }}>{title}</h3>
+          <Title headingLevel="h3" style={{ marginTop: 0, marginBottom: 10 }}>
+            {title}
+          </Title>
           <Text style={{ fontSize: 14, lineHeight: 1.4 }} color="black">
             {text}
           </Text>
@@ -28,12 +31,20 @@ const Features = ({ items }) => (
         margin: 0;
       }
       .item {
-        width: calc(33.33% - 40px);
+        width: calc(50% - 20px);
         background: rgba(255, 255, 255, 0.6);
         border-radius: 6px;
         text-align: center;
-        padding: 30px;
-        margin: 20px;
+        padding: 5px;
+        margin: 10px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .item {
+          width: calc(33.33% - 40px);
+          margin: 20px;
+          padding: 30px;
+        }
       }
     `}</style>
   </>

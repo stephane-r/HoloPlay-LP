@@ -1,4 +1,4 @@
-import Navigation from "../Navigation";
+import Navigation from '../Navigation';
 
 interface Props {
   color?: string;
@@ -7,7 +7,7 @@ interface Props {
   };
 }
 
-const Text = ({ color = "#303133", style = {}, children }) => (
+const Text = ({ color = '#303133', style = {}, children }) => (
   <>
     <p className="text" style={style}>
       {children}
@@ -17,6 +17,13 @@ const Text = ({ color = "#303133", style = {}, children }) => (
         color: ${color};
         line-height: 1.8;
         margin: 0;
+      }
+
+      @media screen and (max-width: 640px) {
+        .text {
+          font-size: 14px;
+          line-height: 1.7;
+        }
       }
     `}</style>
   </>

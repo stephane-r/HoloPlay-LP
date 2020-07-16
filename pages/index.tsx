@@ -1,17 +1,17 @@
-import Head from "next/head";
-import { ParallaxProvider, Parallax } from "react-scroll-parallax";
-import App from "../components/App";
-import Header from "../components/Header";
-import Button from "../components/Button";
-import Title from "../components/Title";
-import Text from "../components/Text";
-import Spacer from "../components/Spacer";
-import { useState, useEffect } from "react";
-import FeatureList from "../components/List/Feature";
-import Divider from "../components/Divider";
-import fetchYapRelease from "../utils/fetchYapRelease";
-import SectionHead from "../components/SectionHead";
-import Section from "../components/Section";
+import Head from 'next/head';
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import App from '../components/App';
+import Header from '../components/Header';
+import Button from '../components/Button';
+import Title from '../components/Title';
+import Text from '../components/Text';
+import Spacer from '../components/Spacer';
+import { useState, useEffect } from 'react';
+import FeatureList from '../components/List/Feature';
+import Divider from '../components/Divider';
+import fetchYapRelease from '../utils/fetchYapRelease';
+import SectionHead from '../components/SectionHead';
+import Section from '../components/Section';
 
 const Home = () => (
   <App>
@@ -22,15 +22,11 @@ const Home = () => (
     <Header />
     <main>
       <Yap />
-      <Divider
-        style={{
-          marginTop: -250,
-        }}
-      />
+      <Divider hasDesktopException />
       <Features />
       <Divider
         style={{
-          transform: "scaleX(-1) scaleY(-1)",
+          transform: 'scaleX(-1) scaleY(-1)',
         }}
       />
       <ScreenShots />
@@ -96,21 +92,25 @@ const Yap = () => {
             source de Invidious."
             headingLevel="h1"
             color="white"
-            style={{ textAlign: "left" }}
+            style={{ textAlign: 'left' }}
           />
           <Spacer height={40} />
-          <Button href={downloadUrl}>
-            <img
-              src={`${process.env.ASSET_PREFIX}/android.svg`}
-              alt="Android icon"
-              width={30}
-            />
-            <span>
-              &nbsp; Télécharger sur <strong>Android</strong>
-              {""}
-              {appVersion && <small>&nbsp;({appVersion})</small>}
-            </span>
-          </Button>
+          <div className="button-container">
+            <Button href={downloadUrl}>
+              <span className="show-for-medium">
+                <img
+                  src={`${process.env.ASSET_PREFIX}/android.svg`}
+                  alt="Android icon"
+                  width={30}
+                />
+              </span>
+              <span>
+                &nbsp; Télécharger sur <strong>Android</strong>
+                {''}
+                {appVersion && <small>&nbsp;({appVersion})</small>}
+              </span>
+            </Button>
+          </div>
         </section>
         <aside className="aside">
           <div className="app-screens">
@@ -152,15 +152,11 @@ const Yap = () => {
           align-items: center;
           min-height: calc(100vh - 200px);
           margin: auto;
-          padding: 0 40px;
         }
         .section {
           width: 100%;
-          min-width: 700px;
           max-width: 800px;
           flex: 1;
-          padding-right: 100px;
-          padding-left: 65px;
         }
         .app-screens {
           transform: rotate(20deg);
@@ -175,6 +171,32 @@ const Yap = () => {
         .screen {
           padding: 0 10px;
         }
+        .show-for-medium {
+          display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+          .container {
+            padding: 0 40px;
+          }
+          .section {
+            min-width: 700px;
+            padding-right: 100px;
+            padding-left: 65px;
+          }
+          .show-for-medium {
+            display: block;
+          }
+        }
+
+        @media screen and (max-width: 1024px) {
+          .aside {
+            display: none;
+          }
+          .button-container {
+            padding: 0 20px;
+          }
+        }
       `}</style>
     </>
   );
@@ -184,7 +206,7 @@ const Features = () => (
   <>
     <div className="container">
       <Section>
-        <Spacer height={100} />
+        <Spacer height={40} xHeight={70} />
         <SectionHead
           title="Features"
           text="YouTube, le moteur de recherche de musique le plus puissant du
@@ -217,23 +239,29 @@ const ScreenShots = () => (
           harum vel voluptate reprehenderit excepturi! Asperiores quasi, illo
           cum deleniti ratione doloremque."
       />
-      <Spacer height={100} />
+      <Spacer height={50} xHeight={100} />
       <ul className="list">
         {SCREENSHOTS.map(({ src, title }) => (
-          <li key={src}>
+          <li key={src} className="item">
             <img src={src} className="screenshot" alt={title} title={title} />
           </li>
         ))}
       </ul>
-      <Spacer height={100} />
+      <Spacer height={50} xHeight={100} />
     </Section>
     <style jsx>{`
       .list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
         list-style: none;
         margin: 0;
         padding: 0;
+      }
+      .item {
+        flex: 1;
+        margin-bottom: 20px;
       }
       .screenshot {
         border-radius: 8px;
@@ -256,60 +284,60 @@ const Footer = () => (
 
 const FEATURES_ITEMS = [
   {
-    src: "/icons/search.svg",
+    src: '/icons/search.svg',
     size: 60,
-    title: "Recherche par vidéo et playlist",
-    text: "TODO",
+    title: 'Recherche par vidéo et playlist',
+    text: 'TODO',
   },
   {
-    src: "/icons/queue-music.svg",
+    src: '/icons/queue-music.svg',
     size: 60,
-    title: "Créez vos playlists",
-    text: "Créer, éditer ou supprimer un nombre illimité de playlists",
+    title: 'Créez vos playlists',
+    text: 'Créer, éditer ou supprimer un nombre illimité de playlists',
   },
   {
-    src: "/icons/favorite.svg",
+    src: '/icons/favorite.svg',
     size: 55,
-    title: "Mettez en favoris",
-    text: "Un écran dédié à vos musiques favorites",
+    title: 'Mettez en favoris',
+    text: 'Un écran dédié à vos musiques favorites',
   },
   {
-    src: "/icons/mobile.svg",
+    src: '/icons/mobile.svg',
     size: 60,
-    title: "Background mode",
+    title: 'Background mode',
     text:
-      "Continuez à naviguer sur votre mobile en écoutant vos musiques préférées",
+      'Continuez à naviguer sur votre mobile en écoutant vos musiques préférées',
   },
   {
-    src: "/icons/offline.svg",
+    src: '/icons/offline.svg',
     size: 60,
-    title: "Offline",
+    title: 'Offline',
     text:
-      "Le dernier son écouté reste en cache, partez dans le métro tranquille",
+      'Le dernier son écouté reste en cache, partez dans le métro tranquille',
   },
   {
-    src: "/icons/android-black.svg",
+    src: '/icons/android-black.svg',
     size: 70,
-    title: "Compatible Android Auto",
-    text: "Ecoutez vos musiques favorites, même en conduisant",
+    title: 'Compatible Android Auto',
+    text: 'Ecoutez vos musiques favorites, même en conduisant',
   },
   {
-    src: "/icons/security.svg",
+    src: '/icons/security.svg',
     size: 60,
-    title: "Respet de votre vie privée",
-    text: "TODO",
+    title: 'Respet de votre vie privée',
+    text: 'TODO',
   },
   {
-    src: "/icons/code.svg",
+    src: '/icons/code.svg',
     size: 60,
-    title: "Open Source",
+    title: 'Open Source',
     text:
       "To ensure security and stability, a big part of Headset's source is kept open",
   },
   {
-    src: "/icons/backup.svg",
+    src: '/icons/backup.svg',
     size: 60,
-    title: "Cloud Syncing",
+    title: 'Cloud Syncing',
     text:
       "Déjà utilisateur de l'une des instances Invidious ? Rajouter votre token et synchroniser vos sons préférés sur votre mobile",
   },
@@ -318,23 +346,23 @@ const FEATURES_ITEMS = [
 const SCREENSHOTS = [
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/dashboard.jpg",
-    title: "Dashboard",
+      'https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/dashboard.jpg',
+    title: 'Dashboard',
   },
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/player.jpg",
-    title: "Player",
+      'https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/player.jpg',
+    title: 'Player',
   },
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/playlists.jpg",
-    title: "Playlists",
+      'https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/playlists.jpg',
+    title: 'Playlists',
   },
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/favoris.jpg",
-    title: "Favoris",
+      'https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/favoris.jpg',
+    title: 'Favoris',
   },
 ];
 

@@ -1,4 +1,4 @@
-import Navigation from "../Navigation";
+import Navigation from '../Navigation';
 
 interface Props {
   href: null | string;
@@ -24,6 +24,7 @@ const Button = ({ href, children }: Props) => (
         letter-spacing: 1px;
         padding: 0 25px;
         transition: 0.2s;
+        text-align: center;
       }
       .button:hover {
         background: rgba(255, 255, 255, 0.1);

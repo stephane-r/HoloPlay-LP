@@ -17,6 +17,7 @@ const Logo = () => (
         margin-right: 100px;
       }
       .logo {
+        flex: 0 0 50px;
         width: 50px;
         height: 50px;
         display: flex;
