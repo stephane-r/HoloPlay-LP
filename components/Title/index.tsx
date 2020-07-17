@@ -1,24 +1,24 @@
-import Navigation from '../Navigation';
+import Navigation from "../Navigation";
 
 interface Props {
   headingLevel: string;
-  color: string;
+  color?: string;
   style?: {
     [key: string]: string | number;
   };
   children: React.ReactChild;
 }
 
-const VALID_HEADING_LEVELS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+const VALID_HEADING_LEVELS = ["h1", "h2", "h3", "h4", "h5", "h6"];
 
 const Title = ({
   headingLevel,
-  color = '#303133',
+  color = "#303133",
   style = {},
   children,
 }: Props) => {
-  const safeHeading = headingLevel?.toLowerCase() ?? '';
-  const Balise = VALID_HEADING_LEVELS.includes(safeHeading) ? safeHeading : 'p';
+  const safeHeading = headingLevel?.toLowerCase() ?? "";
+  const Balise = VALID_HEADING_LEVELS.includes(safeHeading) ? safeHeading : "p";
 
   return (
     <>
