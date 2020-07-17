@@ -11,8 +11,7 @@ const Divider = ({ style = {}, hasDesktopException = false }: Props) => (
       version="1.1"
       x="0px"
       y="0px"
-      width="240px"
-      height="24px"
+      width={240}
       viewBox="0 0 240 24"
       enableBackground="new 0 0 240 24"
       preserveAspectRatio="none"
@@ -23,7 +22,7 @@ const Divider = ({ style = {}, hasDesktopException = false }: Props) => (
         fill="#ffffff"
         fillOpacity="0.33"
         d="M240,24V0c-51.797,0-69.883,13.18-94.707,15.59c-24.691,2.4-43.872-1.17-63.765-1.08 c-19.17,0.1-31.196,3.65-51.309,6.58C15.552,23.21,4.321,22.471,0,22.01V24H240z"
-      ></path>{' '}
+      ></path>{" "}
       <path
         fill="#ffffff"
         fillOpacity="0.33"
@@ -47,7 +46,7 @@ const Divider = ({ style = {}, hasDesktopException = false }: Props) => (
       @media screen and (min-width: 768px) {
         .divider {
           height: 300px;
-          margin-top: ${hasDesktopException ? '-250' : '0'}px;
+          margin-top: ${hasDesktopException ? "-250" : "0"}px;
         }
       }
     `}</style>
