@@ -12,6 +12,7 @@ import Divider from "../components/Divider";
 import fetchYapRelease from "../utils/fetchYapRelease";
 import SectionHead from "../components/SectionHead";
 import Section from "../components/Section";
+import Navigation from "../components/Navigation";
 
 const Home = () => (
   <App>
@@ -84,7 +85,7 @@ const Yap = () => {
   return (
     <>
       <Spacer height={20} xHeight={1} />
-      <div className="container">
+      <div id="app" className="container">
         <section className="section">
           <SectionHead
             title="Youtube Audio Player"
@@ -130,7 +131,7 @@ const Yap = () => {
                   <img
                     src={`${process.env.ASSET_PREFIX}/player.png`}
                     alt=""
-                    width="350"
+                    width="360"
                   />
                 </Parallax>
               </div>
@@ -205,7 +206,7 @@ const Yap = () => {
 
 const Features = () => (
   <>
-    <div className="container">
+    <div id="features" className="container">
       <Section>
         <Spacer height={40} xHeight={70} />
         <SectionHead
@@ -232,7 +233,7 @@ const Features = () => (
 
 const ScreenShots = () => (
   <>
-    <Section>
+    <Section id="screenshots">
       <SectionHead
         title="Screenshots"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam beatae,
@@ -263,6 +264,7 @@ const ScreenShots = () => (
       }
       .item {
         flex: 1;
+        text-align: center;
         margin-bottom: 20px;
       }
       .screenshot {
@@ -277,7 +279,7 @@ const ScreenShots = () => (
         }
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1400px) {
         .item {
           padding: 0 20px;
         }
@@ -294,10 +296,69 @@ const ScreenShots = () => (
 
 const Footer = () => (
   <>
-    <footer className="footer" />
+    <footer id="footer" className="footer">
+      <Navigation linkColor="black" linkSpacer={5} />
+      <div className="spacer" />
+      <a
+        href="https://github.com/stephane-r"
+        target="_blank"
+        className="link"
+        title="Github"
+      >
+        <img
+          src={`/icons/github-black.svg`}
+          alt="Github logo"
+          width={22}
+          className="logo"
+        />
+      </a>
+      <a
+        href="https://fr.linkedin.com/in/stéphane-richin-63b44710a"
+        target="_blank"
+        className="link"
+        title="LinkedIn"
+      >
+        <img
+          src={`/icons/linkedin.svg`}
+          alt="LinkedIn logo"
+          width={22}
+          className="logo"
+        />
+      </a>
+      <a
+        href="https://twitter.com/ILeG3nDz"
+        target="_blank"
+        className="link"
+        title="Twitter"
+      >
+        <img
+          src={`/icons/twitter.svg`}
+          alt="Twitter logo"
+          width={22}
+          className="logo"
+        />
+      </a>
+    </footer>
     <style jsx>{`
       .footer {
+        display: flex;
+        justify-content: center;
         background: white;
+      }
+      .spacer {
+        display: none;
+        width: 30px;
+      }
+      .link {
+        padding: 20px 10px;
+      }
+      .logo {
+        display: block;
+      }
+      @media screen and (min-width: 768px) {
+        .spacer {
+          display: block;
+        }
       }
     `}</style>
   </>
@@ -306,58 +367,58 @@ const Footer = () => (
 const FEATURES_ITEMS = [
   {
     src: "/icons/search.svg",
-    size: 60,
+    size: 55,
     title: "Recherche par vidéo et playlist",
     text: "TODO",
   },
   {
     src: "/icons/queue-music.svg",
-    size: 60,
+    size: 55,
     title: "Créez vos playlists",
     text: "Créer, éditer ou supprimer un nombre illimité de playlists",
   },
   {
     src: "/icons/favorite.svg",
-    size: 55,
+    size: 50,
     title: "Mettez en favoris",
     text: "Un écran dédié à vos musiques favorites",
   },
   {
     src: "/icons/mobile.svg",
-    size: 60,
+    size: 55,
     title: "Background mode",
     text:
       "Continuez à naviguer sur votre mobile en écoutant vos musiques préférées",
   },
   {
     src: "/icons/offline.svg",
-    size: 60,
+    size: 55,
     title: "Offline",
     text:
       "Le dernier son écouté reste en cache, partez dans le métro tranquille",
   },
   {
     src: "/icons/android-black.svg",
-    size: 70,
+    size: 65,
     title: "Compatible Android Auto",
     text: "Ecoutez vos musiques favorites, même en conduisant",
   },
   {
     src: "/icons/security.svg",
-    size: 60,
+    size: 55,
     title: "Respet de votre vie privée",
     text: "TODO",
   },
   {
     src: "/icons/code.svg",
-    size: 60,
+    size: 55,
     title: "Open Source",
     text:
       "To ensure security and stability, a big part of Headset's source is kept open",
   },
   {
     src: "/icons/backup.svg",
-    size: 60,
+    size: 55,
     title: "Cloud Syncing",
     text:
       "Déjà utilisateur de l'une des instances Invidious ? Rajouter votre token et synchroniser vos sons préférés sur votre mobile",

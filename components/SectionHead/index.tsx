@@ -1,6 +1,6 @@
-import Title from "../Title";
-import Spacer from "../Spacer";
-import Text from "../Text";
+import Title from '../Title';
+import Spacer from '../Spacer';
+import Text from '../Text';
 
 interface Props {
   color?: string;
@@ -13,19 +13,21 @@ interface Props {
 }
 
 const SectionHead = ({
-  color = "white",
-  headingLevel = "h2",
+  color = 'white',
+  headingLevel = 'h2',
   title,
   text,
   style,
+  children,
 }: Props) => (
   <>
-    <header className="header" style={{ textAlign: "center", ...style }}>
+    <header className="header" style={{ textAlign: 'center', ...style }}>
       <Title headingLevel={headingLevel} color={color}>
         {title}
       </Title>
       <Spacer height={20} xHeight={40} />
       <Text color={color}>{text}</Text>
+      {children && children}
     </header>
     <style jsx>{`
       .header {

@@ -6,7 +6,7 @@ const Features = ({ items }) => (
     <ul className="list">
       {items.map(({ src, size, title, text }) => (
         <li key={title} className="item">
-          <div style={{ height: 70 }}>
+          <div className="image-container">
             <img
               src={process.env.ASSET_PREFIX + src}
               alt={title}
@@ -36,13 +36,16 @@ const Features = ({ items }) => (
         border-radius: 6px;
         text-align: center;
         padding: 5px;
-        margin: 10px;
+        margin: 10px 10px 20px;
+      }
+      .image-container {
+        height: 65ppx;
       }
 
       @media screen and (min-width: 768px) {
         .item {
           width: calc(33.33% - 40px);
-          margin: 20px;
+          margin: 20px 20px 0;
           padding: 30px;
         }
       }

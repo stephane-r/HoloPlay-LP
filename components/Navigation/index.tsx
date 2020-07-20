@@ -1,40 +1,62 @@
-const Navigation = () => (
-  <>
-    <nav className="nav">
-      <a href="" className="nav-link">
-        <span className="nav-text">Home</span>
-      </a>
-      <a href="" className="nav-link">
-        features
-      </a>
-      <a href="" className="nav-link">
-        screenshots
-      </a>
-      <a href="" className="nav-link">
-        contact
-      </a>
-    </nav>
-    <style jsx>{`
-      .nav {
-        display: flex;
-      }
-      .nav-link {
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 13px;
-        padding-left: 20px;
-      }
-      .nav-link:not(:last-child) {
-        padding-right: 20px;
-      }
+import useScrollTo from "../../hooks/useScrollTo";
 
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-    `}</style>
-  </>
-);
+interface Props {
+  linkColor?: string;
+  linkSpacer?: number;
+}
+
+const Navigation = ({ linkColor = "white", linkSpacer = 20 }: Props) => {
+  const scrollTo = useScrollTo();
+
+  return (
+    <>
+      <nav className="nav">
+        <a onClick={() => scrollTo("app")} className="nav-link">
+          <span className="nav-text">App</span>
+        </a>
+        <a onClick={() => scrollTo("features")} className="nav-link">
+          <span className="nav-text">features</span>
+        </a>
+        <a onClick={() => scrollTo("screenshots")} className="nav-link">
+          <span className="nav-text">screenshots</span>
+        </a>
+        <a onClick={() => scrollTo("footer")} className="nav-link">
+          <span className="nav-text">contact</span>
+        </a>
+      </nav>
+      <style jsx>{`
+        .nav {
+          display: flex;
+          align-items: center;
+        }
+        .nav-link {
+          color: ${linkColor};
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 13px;
+          padding-left: ${linkSpacer}px;
+          cursor: pointer;
+        }
+        .nav-text {
+          display: block;
+          border-bottom: 2px solid transparent;
+          padding-bottom: 2px;
+          transition: 0.2s;
+        }
+        .nav-link:hover .nav-text {
+          border-color: white;
+        }
+        .nav-link:not(:last-child) {
+          padding-right: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      `}</style>
+    </>
+  );
+};
 
 export default Navigation;

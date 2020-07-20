@@ -7,7 +7,7 @@ interface Props {
 
 const Button = ({ href, children }: Props) => (
   <>
-    <a className="button" href={href}>
+    <a className="button" href={href} target="_blank">
       {children}
     </a>
     <style jsx>{`

@@ -1,13 +1,14 @@
 interface Props {
+  id?: string;
   style?: {
     [key: string]: string | number;
   };
   children: React.ReactChild | React.ReactChild[];
 }
 
-const Section = ({ style, children }: Props) => (
+const Section = ({ id, style, children }: Props) => (
   <>
-    <section className="section" style={style}>
+    <section id={id} className="section" style={style}>
       {children}
     </section>
     <style jsx>{`
