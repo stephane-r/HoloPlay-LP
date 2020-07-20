@@ -89,9 +89,8 @@ const Yap = () => {
         <section className="section">
           <SectionHead
             title="Youtube Audio Player"
-            text="Youtube Audio Player est une application Android qui permet
-            d'écouter les sources Youtube en passant par les instances open
-            source de Invidious."
+            text="Youtube Audio Player is an Android application which allows
+            listen to Youtube sources through open instances source of Invidious."
             headingLevel="h1"
             color="white"
             style={{ textAlign: "left" }}
@@ -107,7 +106,7 @@ const Yap = () => {
                 />
               </span>
               <span>
-                &nbsp; Télécharger sur <strong>Android</strong>
+                &nbsp; Download for <strong>Android</strong>
                 {""}
                 {appVersion && <small>&nbsp;({appVersion})</small>}
               </span>
@@ -211,11 +210,7 @@ const Features = () => (
         <Spacer height={40} xHeight={70} />
         <SectionHead
           title="Features"
-          text="YouTube, le moteur de recherche de musique le plus puissant du
-          monde, est à votre service. Des tubes massifs aux gemmes rares en
-          passant par les classiques cultes, tout y est. Avec plus de contenu
-          ajouté chaque minute, c'est plus de musique que ce que vous pourriez
-          écouter dans une vie."
+          text="Youtube is probably the richest audio platform in the world. Thanks to the magnificent work of the open source project Invidious, Youtube Audio Player allows access without tracking, without advertising and listening in the background without interruption."
           color="black"
         />
         <Spacer height={60} />
@@ -236,10 +231,7 @@ const ScreenShots = () => (
     <Section id="screenshots">
       <SectionHead
         title="Screenshots"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam beatae,
-          suscipit quos voluptatibus eaque repudiandae magni doloribus quae,
-          harum vel voluptate reprehenderit excepturi! Asperiores quasi, illo
-          cum deleniti ratione doloremque."
+        text="Youtube Audio Player has a simple design and only has 5 screens. For now, the app is not optimized for tablet use, but maybe for later ?"
       />
       <Spacer height={50} xHeight={100} />
       <ul className="list">
@@ -368,19 +360,19 @@ const FEATURES_ITEMS = [
   {
     src: "/icons/search.svg",
     size: 55,
-    title: "Recherche par vidéo et playlist",
+    title: "Search by video and playlist",
     text: "TODO",
   },
   {
     src: "/icons/queue-music.svg",
     size: 55,
-    title: "Créez vos playlists",
+    title: "Create your playlists",
     text: "Créer, éditer ou supprimer un nombre illimité de playlists",
   },
   {
     src: "/icons/favorite.svg",
     size: 50,
-    title: "Mettez en favoris",
+    title: "Save on favoris",
     text: "Un écran dédié à vos musiques favorites",
   },
   {
@@ -400,13 +392,13 @@ const FEATURES_ITEMS = [
   {
     src: "/icons/android-black.svg",
     size: 65,
-    title: "Compatible Android Auto",
+    title: "Work on Android Auto",
     text: "Ecoutez vos musiques favorites, même en conduisant",
   },
   {
     src: "/icons/security.svg",
     size: 55,
-    title: "Respet de votre vie privée",
+    title: "Respect your privacy",
     text: "TODO",
   },
   {

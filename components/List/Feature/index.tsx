@@ -1,5 +1,5 @@
-import Text from '../../Text';
-import Title from '../../Title';
+import Text from "../../Text";
+import Title from "../../Title";
 
 const Features = ({ items }) => (
   <>
@@ -39,7 +39,7 @@ const Features = ({ items }) => (
         margin: 10px 10px 20px;
       }
       .image-container {
-        height: 65ppx;
+        height: 65px;
       }
 
       @media screen and (min-width: 768px) {

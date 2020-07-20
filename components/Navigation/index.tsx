@@ -28,6 +28,7 @@ const Navigation = ({ linkColor = "white", linkSpacer = 20 }: Props) => {
         .nav {
           display: flex;
           align-items: center;
+          padding-top: 3px;
         }
         .nav-link {
           color: ${linkColor};
