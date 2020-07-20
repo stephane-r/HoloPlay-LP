@@ -298,7 +298,7 @@ const Footer = () => (
         title="Github"
       >
         <img
-          src={`/icons/github-black.svg`}
+          src={`${process.env.ASSET_PREFIX}/icons/github-black.svg`}
           alt="Github logo"
           width={22}
           className="logo"
@@ -311,7 +311,7 @@ const Footer = () => (
         title="LinkedIn"
       >
         <img
-          src={`/icons/linkedin.svg`}
+          src={`${process.env.ASSET_PREFIX}/icons/linkedin.svg`}
           alt="LinkedIn logo"
           width={22}
           className="logo"
@@ -324,7 +324,7 @@ const Footer = () => (
         title="Twitter"
       >
         <img
-          src={`/icons/twitter.svg`}
+          src={`${process.env.ASSET_PREFIX}/icons/twitter.svg`}
           alt="Twitter logo"
           width={22}
           className="logo"
