@@ -361,59 +361,59 @@ const FEATURES_ITEMS = [
     src: "/icons/search.svg",
     size: 55,
     title: "Search by video and playlist",
-    text: "TODO",
+    text: "Search your Youtube source by name or by playlists, and play them !",
   },
   {
     src: "/icons/queue-music.svg",
     size: 55,
     title: "Create your playlists",
-    text: "Créer, éditer ou supprimer un nombre illimité de playlists",
+    text: "Create, edit or remove an unlimited number of playlists",
   },
   {
     src: "/icons/favorite.svg",
     size: 50,
     title: "Save on favoris",
-    text: "Un écran dédié à vos musiques favorites",
+    text: "A screen dedicated to your favorite music",
   },
   {
     src: "/icons/mobile.svg",
     size: 55,
     title: "Background mode",
     text:
-      "Continuez à naviguer sur votre mobile en écoutant vos musiques préférées",
+      "Continue browsing on your mobile while listening to your favorite music",
   },
   {
     src: "/icons/offline.svg",
     size: 55,
     title: "Offline",
-    text:
-      "Le dernier son écouté reste en cache, partez dans le métro tranquille",
+    text: "The latest video is cached ! Stay cool without network :)",
   },
   {
     src: "/icons/android-black.svg",
     size: 65,
     title: "Work on Android Auto",
-    text: "Ecoutez vos musiques favorites, même en conduisant",
+    text: "Listen your favorite music, even while driving",
   },
   {
     src: "/icons/security.svg",
     size: 55,
     title: "Respect your privacy",
-    text: "TODO",
+    text:
+      "By using Invidious API, all your actions have no tracking, no advertising",
   },
   {
     src: "/icons/code.svg",
     size: 55,
     title: "Open Source",
     text:
-      "To ensure security and stability, a big part of Headset's source is kept open",
+      "To ensure security and stability, 100% of Youtube Audio Player source is open",
   },
   {
     src: "/icons/backup.svg",
     size: 55,
     title: "Cloud Syncing",
     text:
-      "Déjà utilisateur de l'une des instances Invidious ? Rajouter votre token et synchroniser vos sons préférés sur votre mobile",
+      "Already a user of one of the Invidious instances? Add your token and synchronize your favorite sounds on your mobile !",
   },
 ];
 
