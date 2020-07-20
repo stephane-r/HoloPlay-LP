@@ -13,7 +13,7 @@ const useScrollTo = (): UseScrollToHook => {
     }
   };
 
-  return scrollTo;
+  return { scrollTo };
 };
 
 export default useScrollTo;

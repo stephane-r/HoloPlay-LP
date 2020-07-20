@@ -6,21 +6,21 @@ interface Props {
 }
 
 const Navigation = ({ linkColor = "white", linkSpacer = 20 }: Props) => {
-  const scrollTo = useScrollTo();
+  const { scrollTo } = useScrollTo();
 
   return (
     <>
       <nav className="nav">
-        <a onClick={() => scrollTo("app")} className="nav-link">
+        <a onClick={(): void => scrollTo("app")} className="nav-link">
           <span className="nav-text">App</span>
         </a>
-        <a onClick={() => scrollTo("features")} className="nav-link">
+        <a onClick={(): void => scrollTo("features")} className="nav-link">
           <span className="nav-text">features</span>
         </a>
-        <a onClick={() => scrollTo("screenshots")} className="nav-link">
+        <a onClick={(): void => scrollTo("screenshots")} className="nav-link">
           <span className="nav-text">screenshots</span>
         </a>
-        <a onClick={() => scrollTo("footer")} className="nav-link">
+        <a onClick={(): void => scrollTo("footer")} className="nav-link">
           <span className="nav-text">contact</span>
         </a>
       </nav>
