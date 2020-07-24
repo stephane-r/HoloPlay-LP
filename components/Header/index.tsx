@@ -10,7 +10,7 @@ const Header = () => (
         <Logo />
         <Navigation />
         <div style={{ marginLeft: "auto" }}>
-          <Button href="https://github.com/stephane-r/Youtube-Audio-Player">
+          <Button href="https://github.com/stephane-r/HoloPlay">
             <img
               src={`${process.env.ASSET_PREFIX}/icons/github.svg`}
               width={20}

@@ -17,7 +17,7 @@ import Navigation from "../components/Navigation";
 const Home = () => (
   <App>
     <Head>
-      <title>Youtube Audio Player</title>
+      <title>HoloPlay</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header />
@@ -88,8 +88,8 @@ const Yap = () => {
       <div id="app" className="container">
         <section className="section">
           <SectionHead
-            title="Youtube Audio Player"
-            text="Youtube Audio Player is an Android application which allows
+            title="HoloPlay"
+            text="HoloPlay is an Android application which allows
             listen to Youtube sources through open instances source of Invidious."
             headingLevel="h1"
             color="white"
@@ -178,7 +178,7 @@ const Yap = () => {
           .container {
             display: flex;
             align-items: center;
-            min-height: calc(100vh - 200px);
+            height: calc(100vh - 200px);
           }
           .section {
             min-width: 700px;
@@ -194,6 +194,9 @@ const Yap = () => {
           .aside {
             display: none;
           }
+        }
+
+        @media screen and (max-width: 768px) {
           .button-container {
             padding: 0 20px;
           }
@@ -210,7 +213,7 @@ const Features = () => (
         <Spacer height={40} xHeight={70} />
         <SectionHead
           title="Features"
-          text="Youtube is probably the richest audio platform in the world. Thanks to the magnificent work of the open source project Invidious, Youtube Audio Player allows access without tracking, without advertising and listening in the background without interruption."
+          text="Youtube is probably the richest audio platform in the world. Thanks to the magnificent work of the open source project Invidious, HoloPlay allows access without tracking, without advertising and listening in the background without interruption."
           color="black"
         />
         <Spacer height={60} />
@@ -231,7 +234,7 @@ const ScreenShots = () => (
     <Section id="screenshots">
       <SectionHead
         title="Screenshots"
-        text="Youtube Audio Player has a simple design and only has 5 screens. For now, the app is not optimized for tablet use, but maybe for later ?"
+        text="HoloPlay has a simple design and only has 5 screens. For now, the app is not optimized for tablet use, but maybe for later ?"
       />
       <Spacer height={50} xHeight={100} />
       <ul className="list">
@@ -330,6 +333,18 @@ const Footer = () => (
           className="logo"
         />
       </a>
+      <a
+        href="mailto:contact@stephane-richin.fr"
+        className="link"
+        title="Email me"
+      >
+        <img
+          src={`${process.env.ASSET_PREFIX}/icons/email.svg`}
+          alt="Email"
+          width={22}
+          className="logo"
+        />
+      </a>
     </footer>
     <style jsx>{`
       .footer {
@@ -346,6 +361,10 @@ const Footer = () => (
       }
       .logo {
         display: block;
+        transition: 0.2s;
+      }
+      .logo:hover {
+        transform: translate3d(0, -5px, 0);
       }
       @media screen and (min-width: 768px) {
         .spacer {
@@ -405,8 +424,7 @@ const FEATURES_ITEMS = [
     src: "/icons/code.svg",
     size: 55,
     title: "Open Source",
-    text:
-      "To ensure security and stability, 100% of Youtube Audio Player source is open",
+    text: "To ensure security and stability, 100% of HoloPlay source is open",
   },
   {
     src: "/icons/backup.svg",
@@ -420,22 +438,22 @@ const FEATURES_ITEMS = [
 const SCREENSHOTS = [
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/dashboard.jpg",
+      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/dashboard.jpg",
     title: "Dashboard",
   },
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/player.jpg",
+      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/player.jpg",
     title: "Player",
   },
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/playlists.jpg",
+      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/playlists.jpg",
     title: "Playlists",
   },
   {
     src:
-      "https://raw.githubusercontent.com/stephane-r/Youtube-Audio-Player/develop/docs/favoris.jpg",
+      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/favoris.jpg",
     title: "Favoris",
   },
 ];

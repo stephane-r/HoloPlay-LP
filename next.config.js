@@ -1,6 +1,6 @@
 const isProd = process.env.NODE_ENV === "production";
 
-const ASSET_PREFIX = isProd ? "/Youtube-Audio-Player-LP" : "";
+const ASSET_PREFIX = isProd ? "/HoloPlay-LP" : "";
 
 module.exports = {
   assetPrefix: ASSET_PREFIX,

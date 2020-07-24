@@ -1,10 +1,10 @@
-import Navigation from '../Navigation';
+import Navigation from "../Navigation";
 
 const Logo = () => (
   <>
     <div className="logo-container">
       <div className="logo"></div>
-      <div className="logo-text">Youtube Audio Player</div>
+      <div className="logo-text">HoloPlay</div>
     </div>
     <style jsx>{`
       .logo-container {

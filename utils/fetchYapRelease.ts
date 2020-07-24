@@ -1,5 +1,5 @@
 const API_GITHUB_YAP_RELEASE =
-  "https://api.github.com/repos/stephane-r/Youtube-Audio-Player/releases";
+  "https://api.github.com/repos/stephane-r/HoloPlay/releases";
 
 const fetchYapRelease = () =>
   fetch(API_GITHUB_YAP_RELEASE)
