@@ -12,6 +12,7 @@ import Divider from "../components/Divider";
 import fetchYapRelease from "../utils/fetchYapRelease";
 import SectionHead from "../components/SectionHead";
 import Section from "../components/Section";
+import Navigation from "../components/Navigation";
 
 const Home = () => (
   <App>
@@ -84,13 +85,12 @@ const Yap = () => {
   return (
     <>
       <Spacer height={20} xHeight={1} />
-      <div className="container">
+      <div id="app" className="container">
         <section className="section">
           <SectionHead
             title="Youtube Audio Player"
-            text="Youtube Audio Player est une application Android qui permet
-            d'écouter les sources Youtube en passant par les instances open
-            source de Invidious."
+            text="Youtube Audio Player is an Android application which allows
+            listen to Youtube sources through open instances source of Invidious."
             headingLevel="h1"
             color="white"
             style={{ textAlign: "left" }}
@@ -106,7 +106,7 @@ const Yap = () => {
                 />
               </span>
               <span>
-                &nbsp; Télécharger sur <strong>Android</strong>
+                &nbsp; Download for <strong>Android</strong>
                 {""}
                 {appVersion && <small>&nbsp;({appVersion})</small>}
               </span>
@@ -130,7 +130,7 @@ const Yap = () => {
                   <img
                     src={`${process.env.ASSET_PREFIX}/player.png`}
                     alt=""
-                    width="350"
+                    width="360"
                   />
                 </Parallax>
               </div>
@@ -205,16 +205,12 @@ const Yap = () => {
 
 const Features = () => (
   <>
-    <div className="container">
+    <div id="features" className="container">
       <Section>
         <Spacer height={40} xHeight={70} />
         <SectionHead
           title="Features"
-          text="YouTube, le moteur de recherche de musique le plus puissant du
-          monde, est à votre service. Des tubes massifs aux gemmes rares en
-          passant par les classiques cultes, tout y est. Avec plus de contenu
-          ajouté chaque minute, c'est plus de musique que ce que vous pourriez
-          écouter dans une vie."
+          text="Youtube is probably the richest audio platform in the world. Thanks to the magnificent work of the open source project Invidious, Youtube Audio Player allows access without tracking, without advertising and listening in the background without interruption."
           color="black"
         />
         <Spacer height={60} />
@@ -232,13 +228,10 @@ const Features = () => (
 
 const ScreenShots = () => (
   <>
-    <Section>
+    <Section id="screenshots">
       <SectionHead
         title="Screenshots"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam beatae,
-          suscipit quos voluptatibus eaque repudiandae magni doloribus quae,
-          harum vel voluptate reprehenderit excepturi! Asperiores quasi, illo
-          cum deleniti ratione doloremque."
+        text="Youtube Audio Player has a simple design and only has 5 screens. For now, the app is not optimized for tablet use, but maybe for later ?"
       />
       <Spacer height={50} xHeight={100} />
       <ul className="list">
@@ -263,6 +256,7 @@ const ScreenShots = () => (
       }
       .item {
         flex: 1;
+        text-align: center;
         margin-bottom: 20px;
       }
       .screenshot {
@@ -277,7 +271,7 @@ const ScreenShots = () => (
         }
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1400px) {
         .item {
           padding: 0 20px;
         }
@@ -294,10 +288,69 @@ const ScreenShots = () => (
 
 const Footer = () => (
   <>
-    <footer className="footer" />
+    <footer id="footer" className="footer">
+      <Navigation linkColor="black" linkSpacer={5} />
+      <div className="spacer" />
+      <a
+        href="https://github.com/stephane-r"
+        target="_blank"
+        className="link"
+        title="Github"
+      >
+        <img
+          src={`${process.env.ASSET_PREFIX}/icons/github-black.svg`}
+          alt="Github logo"
+          width={22}
+          className="logo"
+        />
+      </a>
+      <a
+        href="https://fr.linkedin.com/in/stéphane-richin-63b44710a"
+        target="_blank"
+        className="link"
+        title="LinkedIn"
+      >
+        <img
+          src={`${process.env.ASSET_PREFIX}/icons/linkedin.svg`}
+          alt="LinkedIn logo"
+          width={22}
+          className="logo"
+        />
+      </a>
+      <a
+        href="https://twitter.com/ILeG3nDz"
+        target="_blank"
+        className="link"
+        title="Twitter"
+      >
+        <img
+          src={`${process.env.ASSET_PREFIX}/icons/twitter.svg`}
+          alt="Twitter logo"
+          width={22}
+          className="logo"
+        />
+      </a>
+    </footer>
     <style jsx>{`
       .footer {
+        display: flex;
+        justify-content: center;
         background: white;
+      }
+      .spacer {
+        display: none;
+        width: 30px;
+      }
+      .link {
+        padding: 20px 10px;
+      }
+      .logo {
+        display: block;
+      }
+      @media screen and (min-width: 768px) {
+        .spacer {
+          display: block;
+        }
       }
     `}</style>
   </>
@@ -306,61 +359,61 @@ const Footer = () => (
 const FEATURES_ITEMS = [
   {
     src: "/icons/search.svg",
-    size: 60,
-    title: "Recherche par vidéo et playlist",
-    text: "TODO",
+    size: 55,
+    title: "Search by video and playlist",
+    text: "Search your Youtube source by name or by playlists, and play them !",
   },
   {
     src: "/icons/queue-music.svg",
-    size: 60,
-    title: "Créez vos playlists",
-    text: "Créer, éditer ou supprimer un nombre illimité de playlists",
+    size: 55,
+    title: "Create your playlists",
+    text: "Create, edit or remove an unlimited number of playlists",
   },
   {
     src: "/icons/favorite.svg",
-    size: 55,
-    title: "Mettez en favoris",
-    text: "Un écran dédié à vos musiques favorites",
+    size: 50,
+    title: "Save on favoris",
+    text: "A screen dedicated to your favorite music",
   },
   {
     src: "/icons/mobile.svg",
-    size: 60,
+    size: 55,
     title: "Background mode",
     text:
-      "Continuez à naviguer sur votre mobile en écoutant vos musiques préférées",
+      "Continue browsing on your mobile while listening to your favorite music",
   },
   {
     src: "/icons/offline.svg",
-    size: 60,
+    size: 55,
     title: "Offline",
-    text:
-      "Le dernier son écouté reste en cache, partez dans le métro tranquille",
+    text: "The latest video is cached ! Stay cool without network :)",
   },
   {
     src: "/icons/android-black.svg",
-    size: 70,
-    title: "Compatible Android Auto",
-    text: "Ecoutez vos musiques favorites, même en conduisant",
+    size: 65,
+    title: "Work on Android Auto",
+    text: "Listen your favorite music, even while driving",
   },
   {
     src: "/icons/security.svg",
-    size: 60,
-    title: "Respet de votre vie privée",
-    text: "TODO",
+    size: 55,
+    title: "Respect your privacy",
+    text:
+      "By using Invidious API, all your actions have no tracking, no advertising",
   },
   {
     src: "/icons/code.svg",
-    size: 60,
+    size: 55,
     title: "Open Source",
     text:
-      "To ensure security and stability, a big part of Headset's source is kept open",
+      "To ensure security and stability, 100% of Youtube Audio Player source is open",
   },
   {
     src: "/icons/backup.svg",
-    size: 60,
+    size: 55,
     title: "Cloud Syncing",
     text:
-      "Déjà utilisateur de l'une des instances Invidious ? Rajouter votre token et synchroniser vos sons préférés sur votre mobile",
+      "Already a user of one of the Invidious instances? Add your token and synchronize your favorite sounds on your mobile !",
   },
 ];
 

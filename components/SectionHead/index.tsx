@@ -10,6 +10,7 @@ interface Props {
   style?: {
     [key: string]: string | number;
   };
+  children?: React.ReactChild;
 }
 
 const SectionHead = ({
@@ -18,6 +19,7 @@ const SectionHead = ({
   title,
   text,
   style,
+  children,
 }: Props) => (
   <>
     <header className="header" style={{ textAlign: "center", ...style }}>
@@ -26,6 +28,7 @@ const SectionHead = ({
       </Title>
       <Spacer height={20} xHeight={40} />
       <Text color={color}>{text}</Text>
+      {children && children}
     </header>
     <style jsx>{`
       .header {
