@@ -44,7 +44,7 @@ const Features = ({ items }) => (
 
       @media screen and (min-width: 768px) {
         .item {
-          width: calc(33.33% - 40px);
+          width: calc(25% - 40px);
           margin: 20px 20px 0;
           padding: 30px;
         }

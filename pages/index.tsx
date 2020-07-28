@@ -380,7 +380,7 @@ const FEATURES_ITEMS = [
     src: "/icons/search.svg",
     size: 55,
     title: "Search by video and playlist",
-    text: "Search your Youtube source by name or by playlists, and play them !",
+    text: "Search your video by name or by playlists, and play them !",
   },
   {
     src: "/icons/queue-music.svg",
@@ -393,6 +393,18 @@ const FEATURES_ITEMS = [
     size: 50,
     title: "Save on favoris",
     text: "A screen dedicated to your favorite music",
+  },
+  {
+    src: "/icons/live.svg",
+    size: 50,
+    title: "Live video",
+    text: "Listening any live video without cut",
+  },
+  {
+    src: "/icons/download.svg",
+    size: 50,
+    title: "Download",
+    text: "Download video and listening with your favorite player",
   },
   {
     src: "/icons/mobile.svg",
@@ -431,7 +443,13 @@ const FEATURES_ITEMS = [
     size: 55,
     title: "Cloud Syncing",
     text:
-      "Already a user of one of the Invidious instances? Add your token and synchronize your favorite sounds on your mobile !",
+      "Already a user of one of the Invidious instances ? Add your token and synchronize your favorite sounds on your mobile !",
+  },
+  {
+    src: "/icons/design.svg",
+    size: 55,
+    title: "Theme (soon !)",
+    text: "Choose between Dark and Light themes",
   },
 ];
 
