@@ -448,7 +448,7 @@ const FEATURES_ITEMS = [
   {
     src: "/icons/design.svg",
     size: 55,
-    title: "Theme (soon !)",
+    title: "Theme",
     text: "Choose between Dark and Light themes",
   },
 ];

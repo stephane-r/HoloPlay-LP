@@ -3,7 +3,11 @@ import Navigation from "../Navigation";
 const Logo = () => (
   <>
     <div className="logo-container">
-      <div className="logo"></div>
+      <img
+        src="/logo-holoplay-white.png"
+        alt="Logo HoloPlay"
+        className="logo"
+      />
       <div className="logo-text">HoloPlay</div>
     </div>
     <style jsx>{`
