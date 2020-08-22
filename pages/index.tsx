@@ -451,6 +451,12 @@ const FEATURES_ITEMS = [
     title: "Theme",
     text: "Choose between Dark and Light themes",
   },
+  {
+    src: "/icons/language.svg",
+    size: 55,
+    title: "Internationalization",
+    text: "Default language is EN, but you can switch on FR language",
+  },
 ];
 
 const SCREENSHOTS = [
