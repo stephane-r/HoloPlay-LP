@@ -11,10 +11,7 @@ const Header = () => (
         <Navigation />
         <div style={{ marginLeft: "auto" }}>
           <Button href="https://github.com/stephane-r/HoloPlay">
-            <img
-              src={`${process.env.ASSET_PREFIX}/icons/github.svg`}
-              width={20}
-            />
+            <img src="/icons/github.svg" width={20} />
             <span className="show-for-medium">&nbsp; Github</span>
           </Button>
         </div>

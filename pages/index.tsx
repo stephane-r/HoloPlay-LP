@@ -13,12 +13,39 @@ import fetchYapRelease from "../utils/fetchYapRelease";
 import SectionHead from "../components/SectionHead";
 import Section from "../components/Section";
 import Navigation from "../components/Navigation";
+import { SCREENSHOTS } from "../data";
 
-const Home = () => (
+const Home: React.FC = () => (
   <App>
     <Head>
       <title>HoloPlay</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/favicon/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/favicon/app.webmanifest" />
+      <link
+        rel="mask-icon"
+        href="/favicon/safari-pinned-tab.svg"
+        color="#ffffff"
+      />
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+      <meta name="theme-color" content="#ffffff" />
     </Head>
     <Header />
     <main>
@@ -99,11 +126,7 @@ const Yap = () => {
           <div className="button-container">
             <Button href={downloadUrl}>
               <span className="show-for-medium">
-                <img
-                  src={`${process.env.ASSET_PREFIX}/android.svg`}
-                  alt="Android icon"
-                  width={30}
-                />
+                <img src="/android.svg" alt="Android icon" width={30} />
               </span>
               <span>
                 &nbsp; Download for <strong>Android</strong>
@@ -118,29 +141,17 @@ const Yap = () => {
             <ParallaxProvider>
               <div className="screen">
                 <Parallax y={[-27, 20]} tagOuter="figure">
-                  <img
-                    src={`${process.env.ASSET_PREFIX}/dashboard.png`}
-                    alt=""
-                    width="250"
-                  />
+                  <img src="/dashboard.png" alt="" width="250" />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[10, -10]} tagOuter="figure">
-                  <img
-                    src={`${process.env.ASSET_PREFIX}/player.png`}
-                    alt=""
-                    width="360"
-                  />
+                  <img src="/player.png" alt="" width="360" />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[30, -40]} tagOuter="figure">
-                  <img
-                    src={`${process.env.ASSET_PREFIX}/playlists.png`}
-                    alt=""
-                    width="250"
-                  />
+                  <img src="/playlists.png" alt="" width="250" />
                 </Parallax>
               </div>
             </ParallaxProvider>
@@ -217,7 +228,7 @@ const Features = () => (
           color="black"
         />
         <Spacer height={60} />
-        <FeatureList items={FEATURES_ITEMS} />
+        <FeatureList />
         <Spacer height={40} />
       </Section>
     </div>
@@ -301,7 +312,7 @@ const Footer = () => (
         title="Github"
       >
         <img
-          src={`${process.env.ASSET_PREFIX}/icons/github-black.svg`}
+          src="/icons/github-black.svg"
           alt="Github logo"
           width={22}
           className="logo"
@@ -314,7 +325,7 @@ const Footer = () => (
         title="LinkedIn"
       >
         <img
-          src={`${process.env.ASSET_PREFIX}/icons/linkedin.svg`}
+          src="/icons/linkedin.svg"
           alt="LinkedIn logo"
           width={22}
           className="logo"
@@ -327,7 +338,7 @@ const Footer = () => (
         title="Twitter"
       >
         <img
-          src={`${process.env.ASSET_PREFIX}/icons/twitter.svg`}
+          src="/icons/twitter.svg"
           alt="Twitter logo"
           width={22}
           className="logo"
@@ -338,12 +349,7 @@ const Footer = () => (
         className="link"
         title="Email me"
       >
-        <img
-          src={`${process.env.ASSET_PREFIX}/icons/email.svg`}
-          alt="Email"
-          width={22}
-          className="logo"
-        />
+        <img src="/icons/email.svg" alt="Email" width={22} className="logo" />
       </a>
     </footer>
     <style jsx>{`
@@ -374,112 +380,5 @@ const Footer = () => (
     `}</style>
   </>
 );
-
-const FEATURES_ITEMS = [
-  {
-    src: "/icons/search.svg",
-    size: 55,
-    title: "Search by video and playlist",
-    text: "Search your video by name or by playlists, and play them !",
-  },
-  {
-    src: "/icons/queue-music.svg",
-    size: 55,
-    title: "Create your playlists",
-    text: "Create, edit or remove an unlimited number of playlists",
-  },
-  {
-    src: "/icons/favorite.svg",
-    size: 50,
-    title: "Save on favoris",
-    text: "A screen dedicated to your favorite music",
-  },
-  {
-    src: "/icons/live.svg",
-    size: 50,
-    title: "Live video",
-    text: "Listening any live video without cut",
-  },
-  {
-    src: "/icons/download.svg",
-    size: 50,
-    title: "Download",
-    text: "Download video and listening with your favorite player",
-  },
-  {
-    src: "/icons/mobile.svg",
-    size: 55,
-    title: "Background mode",
-    text:
-      "Continue browsing on your mobile while listening to your favorite music",
-  },
-  {
-    src: "/icons/offline.svg",
-    size: 55,
-    title: "Offline",
-    text: "The latest video is cached ! Stay cool without network :)",
-  },
-  {
-    src: "/icons/android-black.svg",
-    size: 65,
-    title: "Work on Android Auto",
-    text: "Listen your favorite music, even while driving",
-  },
-  {
-    src: "/icons/security.svg",
-    size: 55,
-    title: "Respect your privacy",
-    text:
-      "By using Invidious API, all your actions have no tracking, no advertising",
-  },
-  {
-    src: "/icons/code.svg",
-    size: 55,
-    title: "Open Source",
-    text: "To ensure security and stability, 100% of HoloPlay source is open",
-  },
-  {
-    src: "/icons/backup.svg",
-    size: 55,
-    title: "Cloud Syncing",
-    text:
-      "Already a user of one of the Invidious instances ? Add your token and synchronize your favorite sounds on your mobile !",
-  },
-  {
-    src: "/icons/design.svg",
-    size: 55,
-    title: "Theme",
-    text: "Choose between Dark and Light themes",
-  },
-  {
-    src: "/icons/language.svg",
-    size: 55,
-    title: "Internationalization",
-    text: "Default language is EN, but you can switch on FR language",
-  },
-];
-
-const SCREENSHOTS = [
-  {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/dashboard.jpg",
-    title: "Dashboard",
-  },
-  {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/player.jpg",
-    title: "Player",
-  },
-  {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/playlists.jpg",
-    title: "Playlists",
-  },
-  {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/docs/favoris.jpg",
-    title: "Favoris",
-  },
-];
 
 export default Home;

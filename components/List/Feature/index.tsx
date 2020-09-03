@@ -1,17 +1,14 @@
 import Text from "../../Text";
 import Title from "../../Title";
+import { FEATURES_ITEMS } from "../../../data";
 
-const Features = ({ items }) => (
+const Features = () => (
   <>
     <ul className="list">
-      {items.map(({ src, size, title, text }) => (
+      {FEATURES_ITEMS.map(({ src, size, title, text }) => (
         <li key={title} className="item">
           <div className="image-container">
-            <img
-              src={process.env.ASSET_PREFIX + src}
-              alt={title}
-              width={size}
-            />
+            <img src={src} alt={title} width={size} />
           </div>
           <Title headingLevel="h3" style={{ marginTop: 0, marginBottom: 10 }}>
             {title}

@@ -4,7 +4,7 @@ const Logo = () => (
   <>
     <div className="logo-container">
       <img
-        src={`${process.env.ASSET_PREFIX}/logo-holoplay-white.png`}
+        src="/logo-holoplay-white.png"
         alt="Logo HoloPlay"
         className="logo"
       />
