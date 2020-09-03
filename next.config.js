@@ -1,6 +1,6 @@
 const isProd = process.env.NODE_ENV === "production";
 
-const ASSET_PREFIX = isProd ? "/" : "";
+const ASSET_PREFIX = isProd ? "" : "";
 
 module.exports = {
   assetPrefix: ASSET_PREFIX,
