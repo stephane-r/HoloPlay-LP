@@ -1,24 +1,25 @@
 language: node_js
 
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH="$HOME/.yarn/bin:$PATH"
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+    - export PATH="$HOME/.yarn/bin:$PATH"
 before_script:
-  - yarn install
+    - yarn install
 
 stages:
-  - deploy
+    - deploy
 
 jobs:
-  include:
-    - stage: deploy
-      name: Deploying Landing Page
-      script: yarn build:export
+    include:
+        - stage: deploy
+          if: tag IS present
+          name: Deploying Landing Page
+          script: yarn build:export
 
 deploy:
-  provider: page
-  github_token: $GITHUB_TOKEN
-  local_dir: out
-  skip_cleanup: true
-  on:
-    tags: true
+    provider: page
+    github_token: $GITHUB_TOKEN
+    local_dir: out
+    skip_cleanup: true
+    on:
+        tags: true
