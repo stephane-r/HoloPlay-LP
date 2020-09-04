@@ -2,8 +2,10 @@ import Navigation from "../Navigation";
 import Logo from "../Logo";
 import Button from "../Button";
 import Spacer from "../Spacer";
+import Icon from "../Icon";
+import { Icons } from "../../enum/Icon";
 
-const Header = () => (
+const Header: React.FC = () => (
   <>
     <header className="header">
       <div className="header-container">
@@ -11,7 +13,7 @@ const Header = () => (
         <Navigation />
         <div style={{ marginLeft: "auto" }}>
           <Button href="https://github.com/stephane-r/HoloPlay">
-            <img src="/icons/github.svg" width={20} />
+            <Icon name={Icons.Github} color="white" width={20} />
             <span className="show-for-medium">&nbsp; Github</span>
           </Button>
         </div>

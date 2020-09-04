@@ -14,6 +14,8 @@ import SectionHead from "../components/SectionHead";
 import Section from "../components/Section";
 import Navigation from "../components/Navigation";
 import { SCREENSHOTS } from "../data";
+import Icon from "../components/Icon";
+import { Icons } from "../enum/Icon";
 
 const Home: React.FC = () => (
   <App>
@@ -126,7 +128,7 @@ const Yap = () => {
           <div className="button-container">
             <Button href={downloadUrl}>
               <span className="show-for-medium">
-                <img src="/android.svg" alt="Android icon" width={30} />
+                <Icon name={Icons.Github} color="white" width={30} />
               </span>
               <span>
                 &nbsp; Download for <strong>Android</strong>
@@ -141,17 +143,17 @@ const Yap = () => {
             <ParallaxProvider>
               <div className="screen">
                 <Parallax y={[-27, 20]} tagOuter="figure">
-                  <img src="/dashboard.png" alt="" width="250" />
+                  <img src="/app/dashboard.png" alt="" width="250" />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[10, -10]} tagOuter="figure">
-                  <img src="/player.png" alt="" width="360" />
+                  <img src="/app/player.png" alt="" width="360" />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[30, -40]} tagOuter="figure">
-                  <img src="/playlists.png" alt="" width="250" />
+                  <img src="/app/playlists.png" alt="" width="250" />
                 </Parallax>
               </div>
             </ParallaxProvider>
@@ -248,22 +250,27 @@ const ScreenShots = () => (
         text="HoloPlay has a simple design and only has 5 screens. For now, the app is not optimized for tablet use, but maybe for later ?"
       />
       <Spacer height={50} xHeight={100} />
-      <ul className="list">
-        {SCREENSHOTS.map(({ src, title }) => (
-          <li key={src} className="item">
-            <img src={src} className="screenshot" alt={title} title={title} />
-          </li>
-        ))}
-      </ul>
-      <Spacer height={50} xHeight={100} />
+      <div className="container">
+        <ul className="list">
+          {SCREENSHOTS.map(({ src, title }) => (
+            <li key={src} className="item">
+              <img src={src} className="screenshot" alt={title} title={title} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Spacer height={50} xHeight={60} />
     </Section>
     <style jsx>{`
+      .container {
+        overflowx: auto;
+      }
       .list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
-        :text-align: center;
+        text-align: center;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -281,7 +288,8 @@ const ScreenShots = () => (
 
       @media screen and (max-width: 640px) {
         .list {
-          flex-direction: column;
+          flex-wrap: no-wrap;
+          width: 2000px;
         }
       }
 
@@ -293,7 +301,14 @@ const ScreenShots = () => (
 
       @media screen and (min-width: 641px) and (max-width: 768px) {
         .item {
-          width: 50%;
+          flex: 0 0 50%;
+        }
+      }
+
+      @media screen and (min-width: 769px) {
+        .item {
+          flex: 0 0 25%;
+          margin-bottom: 40px;
         }
       }
     `}</style>
@@ -311,12 +326,7 @@ const Footer = () => (
         className="link"
         title="Github"
       >
-        <img
-          src="/icons/github-black.svg"
-          alt="Github logo"
-          width={22}
-          className="logo"
-        />
+        <Icon name={Icons.Github} width={22} color="black" />
       </a>
       <a
         href="https://fr.linkedin.com/in/stéphane-richin-63b44710a"
@@ -324,12 +334,7 @@ const Footer = () => (
         className="link"
         title="LinkedIn"
       >
-        <img
-          src="/icons/linkedin.svg"
-          alt="LinkedIn logo"
-          width={22}
-          className="logo"
-        />
+        <Icon name={Icons.LinkedIn} width={22} />
       </a>
       <a
         href="https://twitter.com/ILeG3nDz"
@@ -337,19 +342,14 @@ const Footer = () => (
         className="link"
         title="Twitter"
       >
-        <img
-          src="/icons/twitter.svg"
-          alt="Twitter logo"
-          width={22}
-          className="logo"
-        />
+        <Icon name={Icons.Twitter} width={22} />
       </a>
       <a
         href="mailto:contact@stephane-richin.fr"
         className="link"
         title="Email me"
       >
-        <img src="/icons/email.svg" alt="Email" width={22} className="logo" />
+        <Icon name={Icons.Email} width={22} />
       </a>
     </footer>
     <style jsx>{`

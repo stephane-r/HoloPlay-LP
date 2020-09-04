@@ -1,10 +1,10 @@
 import Navigation from "../Navigation";
 
-const Logo = () => (
+const Logo: React.FC = () => (
   <>
     <div className="logo-container">
       <img
-        src="/logo-holoplay-white.png"
+        src="/logo/logo-holoplay-white.png"
         alt="Logo HoloPlay"
         className="logo"
       />

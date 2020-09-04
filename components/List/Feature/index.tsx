@@ -1,16 +1,20 @@
 import Text from "../../Text";
 import Title from "../../Title";
 import { FEATURES_ITEMS } from "../../../data";
+import Icon from "../../Icon";
 
 const Features = () => (
   <>
     <ul className="list">
-      {FEATURES_ITEMS.map(({ src, size, title, text }) => (
+      {FEATURES_ITEMS.map(({ icon, iconSize, title, text }) => (
         <li key={title} className="item">
           <div className="image-container">
-            <img src={src} alt={title} width={size} />
+            <Icon name={icon} width={iconSize} color="black" />
           </div>
-          <Title headingLevel="h3" style={{ marginTop: 0, marginBottom: 10 }}>
+          <Title
+            headingLevel="h3"
+            style={{ marginTop: 0, marginBottom: 10, color: "black" }}
+          >
             {title}
           </Title>
           <Text style={{ fontSize: 14, lineHeight: 1.4 }} color="black">
