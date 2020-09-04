@@ -7,6 +7,7 @@ export interface SvgProps {
 
 export interface Props extends SvgProps {
   children: React.ReactChild | React.ReactChild[];
+  viewBox: string;
 }
 
 const Svg: React.FC<Props> = ({ viewBox, width, children }) => (
@@ -16,6 +17,7 @@ const Svg: React.FC<Props> = ({ viewBox, width, children }) => (
     viewBox={viewBox}
     style={{
       display: "inline-block",
+      // @ts-ignore
       enableBackground: `new ${viewBox}`,
       width,
     }}
