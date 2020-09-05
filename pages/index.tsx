@@ -20,7 +20,14 @@ import { Icons } from "../enum/Icon";
 const Home: React.FC = () => (
   <App>
     <Head>
-      <title>HoloPlay</title>
+      <title>
+        HoloPlay - Android application that allows you to listen to all Youtube
+        music
+      </title>
+      <meta
+        name="description"
+        content="HoloPlay is an Android application that allows you to listen to all Youtube music, without cuts, without advertising and without tracking."
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
