@@ -11,7 +11,7 @@ const Header: React.FC = () => (
       <div className="header-container">
         <Logo />
         <Navigation />
-        <div style={{ marginLeft: "auto" }}>
+        <div style={{ marginLeft: "auto", position: "relative", zIndex: 2 }}>
           <Button href="https://github.com/stephane-r/HoloPlay">
             <Icon name={Icons.Github} color="white" width={20} />
             <span className="show-for-medium">&nbsp; Github</span>
