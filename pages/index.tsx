@@ -17,17 +17,21 @@ import { SCREENSHOTS } from "../data";
 import Icon from "../components/Icon";
 import { Icons } from "../enum/Icon";
 
+const SEO_TITLE =
+  "HoloPlay - Android application that allows you to listen to all Youtube music";
+const SEO_DESCRIPTION =
+  "HoloPlay is an Android application that allows you to listen to all Youtube music, without cuts, without advertising and without tracking.";
+
 const Home: React.FC = () => (
   <App>
     <Head>
-      <title>
-        HoloPlay - Android application that allows you to listen to all Youtube
-        music
-      </title>
-      <meta
-        name="description"
-        content="HoloPlay is an Android application that allows you to listen to all Youtube music, without cuts, without advertising and without tracking."
-      />
+      <title>{SEO_TITLE}</title>
+      <meta name="description" content={SEO_DESCRIPTION} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@iLeG3nDZ" />
+      <meta name="twitter:title" content={SEO_TITLE} />
+      <meta name="twitter:description" content={SEO_DESCRIPTION} />
+      <meta name="twitter:image" content="/logo/logo-holoplay-white.png" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
