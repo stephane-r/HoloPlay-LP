@@ -1,0 +1,28 @@
+name: HoloPlay-LP CI
+
+on:
+    create:
+        tags:
+            - v*
+
+jobs:
+    build:
+        name: Build and deploying HoloPlay landing page
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Install 🚀
+                uses: borales/actions-yarn@v2.0.0
+                with:
+                cmd: install
+            - name: Build 🚀
+                uses: borales/actions-yarn@v2.0.0
+                with:
+                cmd: build:export
+            - name: Deploy 🚀
+                uses: JamesIves/github-pages-deploy-action@3.7.1
+                with:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    BRANCH: develop
+                    FOLDER: out
+                    CLEAN: true
