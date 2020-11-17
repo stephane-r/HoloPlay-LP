@@ -18,11 +18,21 @@ import { SCREENSHOTS } from "../data";
 import Icon from "../components/Icon";
 import { Icons } from "../enum/Icon";
 
+const SEO_TITLE =
+  "HoloPlay - Android application that allows you to listen to all Youtube music";
+const SEO_DESCRIPTION =
+  "HoloPlay is an Android application that allows you to listen to all Youtube music, without cuts, without advertising and without tracking.";
+
 const Home: React.FC = () => (
   <App>
     <Head>
-      <title>HoloPlay - Android application which allows listen to Youtube sources through Invidious</title>
-      <meta name="description" content="HoloPlay is an Android application which allows listen to Youtube sources through open instances source of Invidious."/>
+      <title>{SEO_TITLE}</title>
+      <meta name="description" content={SEO_DESCRIPTION} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@iLeG3nDZ" />
+      <meta name="twitter:title" content={SEO_TITLE} />
+      <meta name="twitter:description" content={SEO_DESCRIPTION} />
+      <meta name="twitter:image" content="/logo/logo-holoplay-white.png" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -111,7 +121,7 @@ const Yap = () => {
     } catch (error) {
       console.log(error);
     }
-  });
+  }, []);
 
   return (
     <>
@@ -120,8 +130,8 @@ const Yap = () => {
         <section className="section">
           <SectionHead
             title="HoloPlay"
-            text="HoloPlay is an Android application which allows
-            listen to Youtube sources through open instances source of Invidious."
+            text="HoloPlay is an Android application that allows you to listen to all Youtube music, without cuts, without advertising and without tracking."
+            text2="HoloPlay uses the APIs of many Invidious instances and offers a modern interface."
             headingLevel="h1"
             color="white"
             style={{ textAlign: "left" }}
@@ -145,17 +155,29 @@ const Yap = () => {
             <ParallaxProvider>
               <div className="screen">
                 <Parallax y={[-27, 20]} tagOuter="figure">
-                  <img src="/app/dashboard.png" alt="Dashboard screen of HoloPlay" width="250" />
+                  <img
+                    src="/app/dashboard.png"
+                    alt="HoloPlay - Dashboard screen"
+                    className="small-picture"
+                  />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[10, -10]} tagOuter="figure">
-                  <img src="/app/player.png" alt="Player screen of HoloPlay" width="360" />
+                  <img
+                    src="/app/player.png"
+                    alt="HoloPlay - Player screen"
+                    className="medium-picture"
+                  />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[30, -40]} tagOuter="figure">
-                  <img src="/app/playlists.png" alt="Playlists screen of HoloPlay" width="250" />
+                  <img
+                    src="/app/playlists.png"
+                    alt="HoloPlay - Playlists screen"
+                    className="small-picture"
+                  />
                 </Parallax>
               </div>
             </ParallaxProvider>
@@ -188,6 +210,12 @@ const Yap = () => {
         .show-for-medium {
           display: none;
         }
+        .small-picture {
+          width: 150px;
+        }
+        .medium-picture {
+          width: 255px;
+        }
 
         @media screen and (min-width: 768px) {
           .container {
@@ -202,6 +230,15 @@ const Yap = () => {
           }
           .show-for-medium {
             display: block;
+          }
+        }
+
+        @media screen and (min-width: 1500px) {
+          .small-picture {
+            width: 250px;
+          }
+          .medium-picture {
+            width: 360px;
           }
         }
 
@@ -238,6 +275,7 @@ const Features = () => (
     </div>
     <style jsx>{`
       .container {
+        position: relative;
         background: white;
       }
     `}</style>
@@ -269,7 +307,7 @@ const ScreenShots = () => (
     </Section>
     <style jsx>{`
       .container {
-        overflowx: auto;
+        overflow-x: auto;
       }
       .list {
         display: flex;

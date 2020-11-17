@@ -46,7 +46,19 @@ const Features = () => (
         height: 60px;
       }
 
+      @media screen and (min-width: 600px) {
+        .item {
+          width: calc(33.33% - 20px);
+        }
+      }
+
       @media screen and (min-width: 768px) {
+        .item {
+          width: calc(25% - 20px);
+        }
+      }
+
+      @media screen and (min-width: 1150px) {
         .item {
           width: calc(20% - 40px);
           margin: 20px 20px 0;

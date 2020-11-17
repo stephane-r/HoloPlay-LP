@@ -7,6 +7,7 @@ interface Props {
   headingLevel?: string;
   title: string;
   text: string;
+  text2?: string;
   style?: {
     [key: string]: string | number;
   };
@@ -18,6 +19,7 @@ const SectionHead = ({
   headingLevel = "h2",
   title,
   text,
+  text2,
   style,
   children,
 }: Props) => (
@@ -28,6 +30,12 @@ const SectionHead = ({
       </Title>
       <Spacer height={20} xHeight={40} />
       <Text color={color}>{text}</Text>
+      {text2 && (
+        <>
+          <Spacer height={20} />
+          <Text color={color}>{text2}</Text>
+        </>
+      )}
       {children && children}
     </header>
     <style jsx>{`
