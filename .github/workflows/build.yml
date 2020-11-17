@@ -12,17 +12,17 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: Install 🚀
-                uses: borales/actions-yarn@v2.0.0
-                with:
+              uses: borales/actions-yarn@v2.0.0
+              with:
                 cmd: install
             - name: Build 🚀
-                uses: borales/actions-yarn@v2.0.0
-                with:
+              uses: borales/actions-yarn@v2.0.0
+              with:
                 cmd: build:export
             - name: Deploy 🚀
-                uses: JamesIves/github-pages-deploy-action@3.7.1
-                with:
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                    BRANCH: develop
-                    FOLDER: out
-                    CLEAN: true
+              uses: JamesIves/github-pages-deploy-action@3.7.1
+              with:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                BRANCH: develop
+                FOLDER: out
+                CLEAN: true
