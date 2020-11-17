@@ -16,4 +16,5 @@ export enum Icons {
   LinkedIn = "linkedin",
   Twitter = "twitter",
   Email = "email",
+  CarConnected = "car-connected",
 }

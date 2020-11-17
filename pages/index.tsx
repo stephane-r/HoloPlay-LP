@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import App from "../components/App";
 import Header from "../components/Header";
@@ -20,7 +21,8 @@ import { Icons } from "../enum/Icon";
 const Home: React.FC = () => (
   <App>
     <Head>
-      <title>HoloPlay</title>
+      <title>HoloPlay - Android application which allows listen to Youtube sources through Invidious</title>
+      <meta name="description" content="HoloPlay is an Android application which allows listen to Youtube sources through open instances source of Invidious."/>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -143,17 +145,17 @@ const Yap = () => {
             <ParallaxProvider>
               <div className="screen">
                 <Parallax y={[-27, 20]} tagOuter="figure">
-                  <img src="/app/dashboard.png" alt="" width="250" />
+                  <img src="/app/dashboard.png" alt="Dashboard screen of HoloPlay" width="250" />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[10, -10]} tagOuter="figure">
-                  <img src="/app/player.png" alt="" width="360" />
+                  <img src="/app/player.png" alt="Player screen of HoloPlay" width="360" />
                 </Parallax>
               </div>
               <div className="screen">
                 <Parallax y={[30, -40]} tagOuter="figure">
-                  <img src="/app/playlists.png" alt="" width="250" />
+                  <img src="/app/playlists.png" alt="Playlists screen of HoloPlay" width="250" />
                 </Parallax>
               </div>
             </ParallaxProvider>
@@ -254,10 +256,14 @@ const ScreenShots = () => (
         <ul className="list">
           {SCREENSHOTS.map(({ src, title }) => (
             <li key={src} className="item">
-              <img src={src} className="screenshot" alt={title} title={title} />
+              <img src={src} className="screenshot" alt={title} title={title} loading="lazy" />
             </li>
           ))}
         </ul>
+      </div>
+      <Spacer height={50} xHeight={60} />
+      <div style={{ textAlign: 'center' }}>
+        <Button href="https://github.com/stephane-r/HoloPlay">View more</Button>
       </div>
       <Spacer height={50} xHeight={60} />
     </Section>

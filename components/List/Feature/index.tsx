@@ -9,7 +9,7 @@ const Features = () => (
       {FEATURES_ITEMS.map(({ icon, iconSize, title, text }) => (
         <li key={title} className="item">
           <div className="image-container">
-            <Icon name={icon} width={iconSize} color="black" />
+            <Icon name={icon} width={iconSize - 10} color="black" />
           </div>
           <Title
             headingLevel="h3"
@@ -40,7 +40,10 @@ const Features = () => (
         margin: 10px 10px 20px;
       }
       .image-container {
-        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
       }
 
       @media screen and (min-width: 768px) {
@@ -48,6 +51,7 @@ const Features = () => (
           width: calc(20% - 40px);
           margin: 20px 20px 0;
           padding: 30px;
+          padding-bottom: 0;
         }
       }
     `}</style>
