@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from 'next/image';
+import Image from "next/image";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import App from "../components/App";
 import Header from "../components/Header";
@@ -242,6 +242,15 @@ const Yap = () => {
           }
         }
 
+        @media screen and (min-width: 1900px) {
+          .small-picture {
+            width: 300px;
+          }
+          .medium-picture {
+            width: 450px;
+          }
+        }
+
         @media screen and (max-width: 1024px) {
           .aside {
             display: none;
@@ -294,13 +303,19 @@ const ScreenShots = () => (
         <ul className="list">
           {SCREENSHOTS.map(({ src, title }) => (
             <li key={src} className="item">
-              <img src={src} className="screenshot" alt={title} title={title} loading="lazy" />
+              <img
+                src={src}
+                className="screenshot"
+                alt={title}
+                title={title}
+                loading="lazy"
+              />
             </li>
           ))}
         </ul>
       </div>
       <Spacer height={50} xHeight={60} />
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: "center" }}>
         <Button href="https://github.com/stephane-r/HoloPlay">View more</Button>
       </div>
       <Spacer height={50} xHeight={60} />

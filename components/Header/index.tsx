@@ -39,7 +39,7 @@ const Header: React.FC = () => (
           padding: 0 40px;
         }
         .header-container {
-          height: 120px;
+          padding-top: 30px;
         }
       }
 

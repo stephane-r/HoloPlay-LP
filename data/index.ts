@@ -33,8 +33,7 @@ export const FEATURES_ITEMS = [
     icon: "mobile",
     iconSize: 50,
     title: "Background mode",
-    text:
-      "Continue browsing on your mobile while listening to your favorite music",
+    text: "Continue browsing on your mobile while listening to your favorite music",
   },
   {
     icon: "offline",
@@ -70,8 +69,7 @@ export const FEATURES_ITEMS = [
     icon: "security",
     iconSize: 50,
     title: "Respect your privacy",
-    text:
-      "By using Invidious API, all your actions have no tracking, no advertising",
+    text: "By using Invidious API, all your actions have no tracking, no advertising",
   },
   {
     icon: "code",
@@ -83,50 +81,47 @@ export const FEATURES_ITEMS = [
     icon: "backup",
     iconSize: 50,
     title: "Cloud Syncing",
-    text:
-      "Already a user of one of the Invidious instances ? Add your token and synchronize your favorite sounds on your mobile !",
+    text: "Already a user of one of the Invidious instances ? Add your token and synchronize your favorite sounds on your mobile !",
+  },
+  {
+    icon: "sun",
+    iconSize: 50,
+    title: "Self hosting",
+    text: "Add your Invidious instance URL's",
   },
 ];
 
 export const SCREENSHOTS = [
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/dashboard.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/dashboard.jpg",
     title: "Dashboard screen",
   },
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/search.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/search.jpg",
     title: "Search screen",
   },
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/playlists.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/playlists.jpg",
     title: "Playlists screen",
   },
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/favoris.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/favoris.jpg",
     title: "Favoris screen",
   },
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/dashboard-dark.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/dashboard-dark.jpg",
     title: "Dashboard dark mode",
   },
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/player.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/player.jpg",
     title: "Player",
   },
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/drawler.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/drawler.jpg",
     title: "Drawler menu",
   },
   {
-    src:
-      "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg",
+    src: "https://raw.githubusercontent.com/stephane-r/HoloPlay/develop/fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg",
     title: "Settings screen",
   },
 ];

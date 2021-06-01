@@ -18,6 +18,7 @@ import LinkedInIcon from "./LinkedIn";
 import TwitterIcon from "./Twitter";
 import EmailIcon from "./Email";
 import CarConnected from "./CarConnected";
+import SunIcon from "./Sun";
 
 export interface Props extends SvgProps {
   name: string;
@@ -80,6 +81,9 @@ const Icon: React.FC<Props> = ({ name, ...props }) => {
       break;
     case name === Icons.CarConnected:
       Component = <CarConnected {...props} />;
+      break;
+    case name === Icons.Sun:
+      Component = <SunIcon {...props} />;
       break;
     default:
       break;
