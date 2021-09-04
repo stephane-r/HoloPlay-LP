@@ -86,6 +86,13 @@ export const FEATURES_ITEMS = [
     text:
       "Already a user of one of the Invidious instances ? Add your token and synchronize your favorite sounds on your mobile !",
   },
+  {
+    icon: "backup",
+    iconSize: 50,
+    title: "Self hosted",
+    text:
+      "Add your self hosted Invidious instance",
+  },
 ];
 
 export const SCREENSHOTS = [

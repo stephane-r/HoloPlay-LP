@@ -29,7 +29,7 @@ const Home: React.FC = () => (
       <title>{SEO_TITLE}</title>
       <meta name="description" content={SEO_DESCRIPTION} />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@iLeG3nDZ" />
+      <meta name="twitter:site" content="@StephaneRichin" />
       <meta name="twitter:title" content={SEO_TITLE} />
       <meta name="twitter:description" content={SEO_DESCRIPTION} />
       <meta name="twitter:image" content="/logo/logo-holoplay-white.png" />
@@ -242,6 +242,24 @@ const Yap = () => {
           }
         }
 
+        @media screen and (min-width: 1850px) {
+          .small-picture {
+            width: 300px;
+          }
+          .medium-picture {
+            width: 410px;
+          }
+        }
+
+        @media screen and (min-width: 2300px) {
+          .small-picture {
+            width: 330px;
+          }
+          .medium-picture {
+            width: 540px;
+          }
+        }
+
         @media screen and (max-width: 1024px) {
           .aside {
             display: none;
@@ -381,7 +399,7 @@ const Footer = () => (
         <Icon name={Icons.LinkedIn} width={22} />
       </a>
       <a
-        href="https://twitter.com/ILeG3nDz"
+        href="https://twitter.com/StephaneRichin"
         target="_blank"
         className="link"
         title="Twitter"
