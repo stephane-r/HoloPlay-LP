@@ -15,11 +15,11 @@ jobs:
               with:
                   node-version: "16"
             - uses: borales/actions-yarn@v2.3.0
-                with:
-                cmd: install
+                  with:
+                  cmd: install
             - uses: borales/actions-yarn@v2.3.0
-                with:
-                cmd: build:export
+                  with:
+                  cmd: build:export
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@3.7.1
               with:
