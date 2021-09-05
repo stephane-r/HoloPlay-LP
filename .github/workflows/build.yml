@@ -11,14 +11,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Install 🚀
-              uses: borales/actions-yarn@v2.0.0
+            - uses: actions/setup-node@v2
               with:
-                  cmd: install
-            - name: Build 🚀
-              uses: borales/actions-yarn@v2.0.0
-              with:
-                  cmd: build:export
+                  node-version: "16"
+            - uses: borales/actions-yarn@v2.3.0
+                with:
+                cmd: install
+            - uses: borales/actions-yarn@v2.3.0
+                with:
+                cmd: build:export
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@3.7.1
               with:
