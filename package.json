@@ -23,7 +23,7 @@
     "devDependencies": {
         "@types/node": "^16.7.1",
         "@types/react": "^17.0.19",
-        "shelljs": "^0.8.4",
+        "shelljs": "^0.8.5",
         "typescript": "^3.9.6"
     }
 }
